@@ -33,14 +33,30 @@ const Home = () => {
             
             <div className="flex flex-wrap gap-4">
               <Button 
-                onClick={() => window.location.href = "/contact"} 
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    window.scrollTo({
+                      top: contactSection.offsetTop - 70,
+                      behavior: "smooth"
+                    });
+                  }
+                }} 
                 className="bg-primary hover:bg-blue-600 text-white"
               >
                 Get In Touch
               </Button>
               
               <Button 
-                onClick={() => window.location.href = "/projects"} 
+                onClick={() => {
+                  const projectsSection = document.getElementById("projects");
+                  if (projectsSection) {
+                    window.scrollTo({
+                      top: projectsSection.offsetTop - 70,
+                      behavior: "smooth"
+                    });
+                  }
+                }} 
                 variant="outline" 
                 className="border-primary text-primary hover:bg-primary hover:text-white"
               >
@@ -50,7 +66,15 @@ const Home = () => {
             
             <div className="mt-8 flex items-center space-x-6">
               <div 
-                onClick={() => window.location.href = "/contact"}
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    window.scrollTo({
+                      top: contactSection.offsetTop - 70,
+                      behavior: "smooth"
+                    });
+                  }
+                }}
                 className="flex items-center gap-2 text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors cursor-pointer"
               >
                 <Linkedin className="h-5 w-5" />
@@ -58,7 +82,15 @@ const Home = () => {
               </div>
               
               <div 
-                onClick={() => window.location.href = "/contact"}
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    window.scrollTo({
+                      top: contactSection.offsetTop - 70,
+                      behavior: "smooth"
+                    });
+                  }
+                }}
                 className="flex items-center gap-2 text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors cursor-pointer"
               >
                 <Mail className="h-5 w-5" />
@@ -66,7 +98,15 @@ const Home = () => {
               </div>
               
               <div 
-                onClick={() => window.location.href = "/contact"}
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    window.scrollTo({
+                      top: contactSection.offsetTop - 70,
+                      behavior: "smooth"
+                    });
+                  }
+                }}
                 className="flex items-center gap-2 text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors cursor-pointer"
               >
                 <Phone className="h-5 w-5" />
