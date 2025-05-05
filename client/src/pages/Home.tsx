@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Linkedin, Mail, Phone } from "lucide-react";
 import ThreeCanvas from "@/components/ThreeCanvas";
+import profileImg from "../assets/profile.jpg";
 
 const Home = () => {
   return (
@@ -82,18 +83,16 @@ const Home = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="order-1 md:order-2 flex justify-center"
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-primary to-accent animate-gradient-x shadow-xl overflow-hidden border-4 border-white dark:border-gray-800">
-              <svg 
-                className="absolute inset-0 w-full h-full text-white/50 dark:text-gray-800/50"
-                fill="currentColor" 
-                viewBox="0 0 20 20"
-              >
-                <path 
-                  fillRule="evenodd" 
-                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" 
-                  clipRule="evenodd" 
+            <div className="profile-container">
+              <div className="profile-circle">
+                <img 
+                  src={profileImg} 
+                  alt="Mayilanandhan D" 
+                  className="profile-image"
                 />
-              </svg>
+              </div>
+              <div className="profile-effect"></div>
+              <div className="profile-glow"></div>
             </div>
           </motion.div>
         </div>
