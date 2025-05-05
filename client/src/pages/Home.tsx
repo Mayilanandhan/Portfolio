@@ -81,18 +81,46 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="order-1 md:order-2 flex justify-center"
+            className="order-1 md:order-2 flex justify-center items-center"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
             <div className="profile-container">
-              <div className="profile-circle">
+              <motion.div 
+                className="profile-circle"
+                whileHover={{ 
+                  boxShadow: "0 20px 40px rgba(37, 99, 235, 0.4)",
+                }}
+              >
                 <img 
                   src={profileImg} 
                   alt="Mayilanandhan D" 
                   className="profile-image"
+                  loading="eager"
                 />
-              </div>
-              <div className="profile-effect"></div>
-              <div className="profile-glow"></div>
+              </motion.div>
+              <motion.div 
+                className="profile-effect"
+                initial={{ opacity: 0.5 }}
+                animate={{ opacity: [0.5, 0.7, 0.5] }}
+                transition={{ 
+                  repeat: Infinity, 
+                  duration: 3,
+                  ease: "easeInOut" 
+                }}
+              ></motion.div>
+              <motion.div 
+                className="profile-glow"
+                animate={{ 
+                  scale: [1, 1.05, 1],
+                  opacity: [0.3, 0.5, 0.3]
+                }}
+                transition={{ 
+                  repeat: Infinity, 
+                  duration: 4,
+                  ease: "easeInOut" 
+                }}
+              ></motion.div>
             </div>
           </motion.div>
         </div>
