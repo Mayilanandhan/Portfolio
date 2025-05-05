@@ -85,11 +85,22 @@ const Home = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <div className="profile-container">
+            <motion.div 
+              className="profile-frame"
+              animate={{
+                boxShadow: ["0px 0px 20px rgba(59, 130, 246, 0.4)", "0px 0px 20px rgba(139, 92, 246, 0.4)", "0px 0px 20px rgba(236, 72, 153, 0.4)", "0px 0px 20px rgba(59, 130, 246, 0.4)"]
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            >
               <motion.div 
                 className="profile-circle"
                 whileHover={{ 
-                  boxShadow: "0 20px 40px rgba(37, 99, 235, 0.4)",
+                  boxShadow: "0 10px 30px rgba(37, 99, 235, 0.3)",
+                  scale: 1.03
                 }}
               >
                 <img 
@@ -99,29 +110,7 @@ const Home = () => {
                   loading="eager"
                 />
               </motion.div>
-              <motion.div 
-                className="profile-effect"
-                initial={{ opacity: 0.5 }}
-                animate={{ opacity: [0.5, 0.7, 0.5] }}
-                transition={{ 
-                  repeat: Infinity, 
-                  duration: 3,
-                  ease: "easeInOut" 
-                }}
-              ></motion.div>
-              <motion.div 
-                className="profile-glow"
-                animate={{ 
-                  scale: [1, 1.05, 1],
-                  opacity: [0.3, 0.5, 0.3]
-                }}
-                transition={{ 
-                  repeat: Infinity, 
-                  duration: 4,
-                  ease: "easeInOut" 
-                }}
-              ></motion.div>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
