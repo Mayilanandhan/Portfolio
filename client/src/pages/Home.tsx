@@ -2,15 +2,12 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Linkedin, Mail, Phone } from "lucide-react";
-import ThreeCanvas from "@/components/ThreeCanvas";
 import profileImg from "../assets/profile.jpg";
 
 const Home = () => {
   return (
     <section id="home" className="relative min-h-screen overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 -z-10"></div>
-      
-      <ThreeCanvas className="absolute inset-0 opacity-20" />
       
       <div className="container mx-auto px-4 pt-28 md:pt-32 pb-16 md:pb-24">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -35,45 +32,46 @@ const Home = () => {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
-                <Button className="bg-primary hover:bg-blue-600 text-white">
-                  Get In Touch
-                </Button>
-              </Link>
+              <Button 
+                onClick={() => window.location.href = "/contact"} 
+                className="bg-primary hover:bg-blue-600 text-white"
+              >
+                Get In Touch
+              </Button>
               
-              <Link href="/projects">
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-                  View Projects
-                </Button>
-              </Link>
+              <Button 
+                onClick={() => window.location.href = "/projects"} 
+                variant="outline" 
+                className="border-primary text-primary hover:bg-primary hover:text-white"
+              >
+                View Projects
+              </Button>
             </div>
             
-            <div className="mt-8 flex items-center space-x-4">
-              <a 
-                href="https://www.linkedin.com/in/mayilanandhan-d-96938a259/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label="LinkedIn Profile"
-                className="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors"
+            <div className="mt-8 flex items-center space-x-6">
+              <div 
+                onClick={() => window.location.href = "/contact"}
+                className="flex items-center gap-2 text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors cursor-pointer"
               >
-                <Linkedin className="h-6 w-6" />
-              </a>
+                <Linkedin className="h-5 w-5" />
+                <span className="text-sm md:text-base font-medium">LinkedIn</span>
+              </div>
               
-              <a 
-                href="mailto:mayilanandhand.22cse@kongu.edu"
-                aria-label="Email"
-                className="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors"
+              <div 
+                onClick={() => window.location.href = "/contact"}
+                className="flex items-center gap-2 text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors cursor-pointer"
               >
-                <Mail className="h-6 w-6" />
-              </a>
+                <Mail className="h-5 w-5" />
+                <span className="text-sm md:text-base font-medium">Email</span>
+              </div>
               
-              <a 
-                href="tel:9344977815"
-                aria-label="Phone"
-                className="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors"
+              <div 
+                onClick={() => window.location.href = "/contact"}
+                className="flex items-center gap-2 text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors cursor-pointer"
               >
-                <Phone className="h-6 w-6" />
-              </a>
+                <Phone className="h-5 w-5" />
+                <span className="text-sm md:text-base font-medium">Phone</span>
+              </div>
             </div>
           </motion.div>
           
