@@ -4,7 +4,6 @@ import { Download, Briefcase, GraduationCap, Award, Eye } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { openResumeInNewTab, downloadResume } from "@/lib/resumeUtils";
-import { ResumeCorrections } from "@/components/ResumeCorrections";
 
 const Resume = () => {
   const experienceItems = [
@@ -68,8 +67,6 @@ const Resume = () => {
           <p className="text-lg mb-8">
             A summary of my professional experience, education, and achievements.
           </p>
-          <ResumeCorrections />
-          
           <div className="flex flex-wrap justify-center gap-4">
             <motion.div
               whileHover={{ scale: 1.05 }}
