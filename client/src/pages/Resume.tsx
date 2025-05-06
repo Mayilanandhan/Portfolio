@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Download, Briefcase, GraduationCap, Award } from "lucide-react";
+import { Download, Briefcase, GraduationCap, Award, Eye } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { openResumeInNewTab, downloadResume } from "@/lib/resumeUtils";
 
 const Resume = () => {
   const experienceItems = [
@@ -66,10 +67,37 @@ const Resume = () => {
           <p className="text-lg mb-8">
             A summary of my professional experience, education, and achievements.
           </p>
-          <Button className="bg-primary hover:bg-blue-600">
-            <Download className="mr-2 h-4 w-4" />
-            Download Full Resume
-          </Button>
+          <div className="flex flex-wrap justify-center gap-4">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button 
+                className="bg-primary hover:bg-blue-600 resume-button"
+                onClick={openResumeInNewTab}
+              >
+                <Eye className="mr-2 h-4 w-4" />
+                View Full Resume
+              </Button>
+            </motion.div>
+            
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              <Button 
+                variant="outline" 
+                className="border-primary text-primary hover:bg-primary hover:text-white download-button-pulse"
+                onClick={downloadResume}
+              >
+                <Download className="mr-2 h-4 w-4" />
+                Download Resume
+              </Button>
+            </motion.div>
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
