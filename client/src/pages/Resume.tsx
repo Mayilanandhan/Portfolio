@@ -68,6 +68,8 @@ const Resume = () => {
           <p className="text-lg mb-8">
             A summary of my professional experience, education, and achievements.
           </p>
+          <ResumeCorrections />
+          
           <div className="flex flex-wrap justify-center gap-4">
             <motion.div
               whileHover={{ scale: 1.05 }}
