@@ -53,6 +53,12 @@ const Projects = () => {
         return "orange";
       case "Innovation":
         return "yellow";
+      case "React":
+        return "blue";
+      case "JavaScript":
+        return "yellow";
+      case "API Integration":
+        return "purple";
       default:
         return "default";
     }

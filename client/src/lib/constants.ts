@@ -11,7 +11,7 @@ export const technicalSkills = [
 export const projects = [
   {
     title: "Hotel Management System",
-    description: "Developed a Hotel Management System to automate booking, check-in/check-out, and billing processes, improving efficiency and guest experience.",
+    description: "Developed a comprehensive Hotel Management System to automate booking, check-in/check-out, and billing processes, improving efficiency and guest experience.",
     date: "OCT - 2023",
     tags: ["Web Development", "UI/UX Design", "Database"],
     imageUrl: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
@@ -28,18 +28,19 @@ export const projects = [
     isPrize: false
   },
   {
+    title: "Recipe Finder",
+    description: "Developed a modern web application that allows users to search for recipes by ingredients, dietary restrictions, and cuisine types. Features include user accounts, saved favorites, and meal planning.",
+    date: "JAN - 2024",
+    tags: ["React", "JavaScript", "API Integration", "Web Development"],
+    imageUrl: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    link: "#",
+    isPrize: false
+  },
+  {
     title: "Smart Medicine Delivery System",
     description: "Secured 1st prize in Paper Presentation on domain of 'Smart Medicine Delivery System' in BIT, showcasing innovative solutions for healthcare logistics.",
     tags: ["Research", "Healthcare", "Innovation"],
     imageUrl: "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
-    link: "#",
-    isPrize: true
-  },
-  {
-    title: "Two Wheeler Air Bag",
-    description: "Secured 1st prize in Paper Presentation on domain of 'Two Wheeler Air Bag' in NEC, presenting innovative safety solutions for two-wheeled vehicles.",
-    tags: ["Research", "Vehicle Safety", "Innovation"],
-    imageUrl: "https://images.unsplash.com/photo-1558981852-426c6c22a060?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
     link: "#",
     isPrize: true
   }
