@@ -215,3 +215,30 @@
 .profile-image:hover {
   filter: contrast(1.05) brightness(1.02);
 }
+
+/* Project card hover effects */
+.project-card-hover-effect {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card-hover-effect:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.dark .project-card-hover-effect:hover {
+  box-shadow: 0 20px 25px -5px rgba(29, 78, 216, 0.15), 0 10px 10px -5px rgba(29, 78, 216, 0.1);
+}
+
+/* Preview button hover animation */
+.preview-button-hover {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.group:hover .preview-button-hover {
+  transform: translateY(0);
+  opacity: 1;
+}
