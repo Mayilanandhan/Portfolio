@@ -4,6 +4,7 @@ import { Download, Briefcase, GraduationCap, Award, Eye } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { openResumeInNewTab, downloadResume } from "@/lib/resumeUtils";
+import { ResumeCorrections } from "@/components/ResumeCorrections";
 
 const Resume = () => {
   const experienceItems = [
